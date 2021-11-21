@@ -5,6 +5,7 @@
 // @grant       GM_xmlhttpRequest
 // @version     1.00
 // @author      nprnvqhy
+// @homepageURL https://github.com/someonelike-u/get-wakanim-subs/
 // @description 11/21/2021, 06:11:00 PM
 // ==/UserScript==
 
