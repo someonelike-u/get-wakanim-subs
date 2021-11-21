@@ -5,5 +5,8 @@ Get subs from wakanim.tv:
 - Open a Wakanim episode (***if the episode is hardsubbed, it does not work***)
 - A new button should appear to get subs. If the button does not appear, refresh the page.
 
+To modify or add new styles:
+- Update the function `addHeader()`
+
 # Disclaimer
 This method of use is very simple to find. I should be not really responsable of a bad use.
