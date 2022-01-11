@@ -92,6 +92,7 @@ PlayResY: 1080
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: Default,${font},${textSize},${textColor},&H000000FF,${borderColor},&H00000000,-1,0,0,0,100,100,0,0,1,${borderSize},0,2,0,0,${verticalMargin},1
+Style: Default - Dialogue,${font},${textSize},${textColor},&H000000FF,${borderColor},&H00000000,-1,0,0,0,100,100,0,0,1,${borderSize},0,1,0,0,${verticalMargin},1
 Style: Default - TOP,${font},${textSize},${textColor},&H000000FF,${borderColor},&H00000000,-1,0,0,0,100,100,0,0,1,${borderSize},0,8,0,0,${verticalMargin},1
 Style: SIGN,${font},${textSize},${textColor},&H000000FF,${borderColor},&H00000000,-1,0,0,0,100,100,0,0,1,${borderSize},0,8,0,0,${verticalMargin},1
 
