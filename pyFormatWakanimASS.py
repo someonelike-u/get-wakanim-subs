@@ -13,8 +13,9 @@ aegisubCLIPath = 'C:\\Program Files\\Aegisub\\aegisub-cli.exe'
 
 # For animes season Winter 2022
 shift70 = ('Tribe Nine', 'Baraou no Souretsu', 'Futsal Boys') # +264  (with funi intro)
-shift46 = ('Hakozume - Kouban Joshi no Gyakushuu', 'Sasaki to Miyano', 'Slow Loop') # +240
+shift46 = ('Hakozume - Kouban Joshi no Gyakushuu', 'Sasaki to Miyano', 'Slow Loop', 'Kenja no Deshi wo Nanoru Kenja') # +240
 shift_26 = ('Gensou Sangokushi - Tengen Reishinki', 'Girls\' Frontline') # +168
+shift430 = ('Tensai Ouji no Akaji Kokka Saisei Jutsu') # +744
 
 def getFrameToShift(name):
     if any(x in name for x in shift70):
@@ -23,6 +24,8 @@ def getFrameToShift(name):
             return 46
     if any(x in name for x in shift_26):
             return -26
+    if any(x in name for x in shift430):
+            return 430
     return 0
 
 def addQuotationMark(contentFile):
@@ -62,7 +65,7 @@ if __name__ == '__main__':
         print('Set dialogues style...')
         formatFileName = file.replace("'", "\\'")
         print(formatFileName)
-        setDialoguesCommand = f'"{aegisubCLIPath}" --automation baguettisation.lua "{formatFileName}" "{formatFileName}" Baguettisation'
+        setDialoguesCommand = f'"{aegisubCLIPath}" --automation baguettisationH.lua "{formatFileName}" "{formatFileName}" Baguettisation'
         subprocess.run(shlex.split(setDialoguesCommand))
 
         print('Add French quotation mark')
