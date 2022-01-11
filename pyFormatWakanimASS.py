@@ -3,9 +3,13 @@ import subprocess
 import glob
 import pysubs2
 
-prefix = '[SubsPlease*'
+# Use a prefix to limit the process of ass files
+# Else, use '*' to catch all ass files
+# prefix = '[SubsPlease*'
+prefix = '*'
 assFiles = glob.glob(f'{prefix}.ass')
 framerate = 24000 / 1001
+aegisubCLIPath = 'C:\\Program Files\\Aegisub\\aegisub-cli.exe'
 
 # For animes season Winter 2022
 shift70 = ('Tribe Nine', 'Baraou no Souretsu', 'Futsal Boys') # +264  (with funi intro)
@@ -60,7 +64,7 @@ if __name__ == '__main__':
         print('Set dialogues style...')
         formatFileName = file.replace("'", "\\'")
         print(formatFileName)
-        setDialoguesCommand = f'"C:\\Program Files\\Aegisub\\aegisub-cli.exe" --automation baguettisationH.lua "{formatFileName}" "{formatFileName}" Baguettisation'
+        setDialoguesCommand = f'"{aegisubCLIPath}" --automation baguettisationH.lua "{formatFileName}" "{formatFileName}" Baguettisation'
         subprocess.run(shlex.split(setDialoguesCommand))
 
         print('Add French quotation mark')
