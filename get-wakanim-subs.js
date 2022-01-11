@@ -3,10 +3,10 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://www.wakanim.tv/*
 // @grant       GM_xmlhttpRequest
-// @version     1.00
+// @version     1.01
 // @author      nprnvqhy
 // @homepageURL https://github.com/someonelike-u/get-wakanim-subs/
-// @description 11/21/2021, 06:11:00 PM
+// @description 11/01/2022, 03:29:00 AM
 // ==/UserScript==
 
 window.addEventListener("load", () => {
