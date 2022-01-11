@@ -37,8 +37,6 @@ def addQuotationMark(contentFile):
     previousQuote = ' »'
     finalContent = contentFile
     for index, line in enumerate(lines):
-        if '"' not in line:
-            continue
         nbQuotes = line.count('"')
         if nbQuotes > 0:
             for _ in range(nbQuotes):
@@ -64,7 +62,7 @@ if __name__ == '__main__':
         print('Set dialogues style...')
         formatFileName = file.replace("'", "\\'")
         print(formatFileName)
-        setDialoguesCommand = f'"{aegisubCLIPath}" --automation baguettisationH.lua "{formatFileName}" "{formatFileName}" Baguettisation'
+        setDialoguesCommand = f'"{aegisubCLIPath}" --automation baguettisation.lua "{formatFileName}" "{formatFileName}" Baguettisation'
         subprocess.run(shlex.split(setDialoguesCommand))
 
         print('Add French quotation mark')
