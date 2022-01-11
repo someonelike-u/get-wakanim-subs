@@ -50,7 +50,7 @@ def addQuotationMark(contentFile):
                     finalContent = finalContent.replace(line, line.replace('"', ' »', 1))
                     line = line.replace('"', ' »', 1)
                     previousQuote = ' »'
-    return finalContent.replace(' - ', ' – ')
+    return finalContent.replace(' - ', ' – ').replace('Default – Dialogue', 'Default - Dialogue')
 
 if __name__ == '__main__':
     for file in assFiles:
