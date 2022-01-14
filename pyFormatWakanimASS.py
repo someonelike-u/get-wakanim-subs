@@ -14,7 +14,7 @@ aegisubCLIPath = 'C:\\Program Files\\Aegisub\\aegisub-cli.exe'
 # For animes season Winter 2022
 shift70 = ('Tribe Nine', 'Baraou no Souretsu', 'Futsal Boys') # +264  (with funi intro)
 shift46 = ('Hakozume - Kouban Joshi no Gyakushuu', 'Sasaki to Miyano', 'Slow Loop', 'Kenja no Deshi wo Nanoru Kenja') # +240
-shift_26 = ('Gensou Sangokushi - Tengen Reishinki', 'Girls\' Frontline') # +168
+shift_26 = ('Gensou Sangokushi - Tengen Reishinki', 'Girls\' Frontline', 'Arifureta Shokugyou de Sekai Saikyou S2') # +168
 shift430 = ('Tensai Ouji no Akaji Kokka Saisei Jutsu') # +744
 
 def getFrameToShift(name):
@@ -62,13 +62,11 @@ if __name__ == '__main__':
         subs.shift(frames=getFrameToShift(file), fps=framerate)
         subs.save(file, fps=framerate)
         
-        print('Set dialogues style...')
-        formatFileName = file.replace("'", "\\'")
-        print(formatFileName)
-        setDialoguesCommand = f'"{aegisubCLIPath}" --automation baguettisationH.lua "{formatFileName}" "{formatFileName}" Baguettisation'
+        print('Add dialogue style...')
+        setDialoguesCommand = f'"{aegisubCLIPath}" --automation baguettisation.lua "{file}" "{file}" Baguettisation'
         subprocess.run(shlex.split(setDialoguesCommand))
 
-        print('Add French quotation mark')
+        print('Add French quotation mark...')
         openFile = open(file, 'r', encoding='utf8', errors='ignore')
         contentFile = openFile.read()
         openFile.close()
