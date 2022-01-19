@@ -16,7 +16,7 @@ To modify or add new styles:
 With `py pyFormatWakanimASS.py`, you can format ass files:
 - Add French quotation mark
 - Add dialogues style with [aegisub-cli](https://github.com/Myaamori/aegisub-cli) and [baguettisation](https://github.com/someonelike-u/Baguettisation) (be sure to get my fork, not the original or it will not work)
-- resync on Funimation video (less manually)
+- resync on Funimation video (less manually, so a check with video is recommanded)
 
 # Disclaimer
 This method of use is very simple to find. I should be not really responsable of a bad use.
