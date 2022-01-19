@@ -12,20 +12,20 @@ framerate = 24000 / 1001
 aegisubCLIPath = 'C:\\Program Files\\Aegisub\\aegisub-cli.exe'
 
 # For animes season Winter 2022
-shift70 = ('Tribe Nine', 'Baraou no Souretsu', 'Futsal Boys') # +264  (with funi intro)
-shift46 = ('Hakozume - Kouban Joshi no Gyakushuu', 'Sasaki to Miyano', 'Slow Loop', 'Kenja no Deshi wo Nanoru Kenja') # +240
-shift_26 = ('Gensou Sangokushi - Tengen Reishinki', 'Girls\' Frontline', 'Arifureta Shokugyou de Sekai Saikyou S2') # +168
-shift430 = ('Tensai Ouji no Akaji Kokka Saisei Jutsu') # +744
+shift70 = ['Tribe Nine', 'Baraou no Souretsu', 'Futsal Boys'] # +264  (with funi intro)
+shift46 = ['Hakozume - Kouban Joshi no Gyakushuu', 'Sasaki to Miyano', 'Slow Loop', 'Kenja no Deshi wo Nanoru Kenja'] # +240
+shift_26 = ['Gensou Sangokushi - Tengen Reishinki', 'Girls\' Frontline', 'Arifureta Shokugyou de Sekai Saikyou S2'] # +168
+shift550 = ['Tensai Ouji no Akaji Kokka Saisei Jutsu'] # +744 (old +430)
 
 def getFrameToShift(name):
     if any(x in name for x in shift70):
-            return 70
+        return 70
     if any(x in name for x in shift46):
-            return 46
+        return 46
     if any(x in name for x in shift_26):
-            return -26
-    if any(x in name for x in shift430):
-            return 430
+        return -26
+    if any(x in name for x in shift550):
+        return 550
     return 0
 
 def addQuotationMark(contentFile):
